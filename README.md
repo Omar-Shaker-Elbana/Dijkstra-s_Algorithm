@@ -133,7 +133,7 @@ This implementation was built to:
 ## 👨‍💻 Author
 
 Omar Shaker 
-
+🔗 **GitHub:** [Omar-Shaker-Elbana](https://github.com/Omar-Shaker-Elbana)
 Computer Science Enthusiast | Algorithm Explorer
 
 If you found this helpful, consider ⭐ starring the repository!
