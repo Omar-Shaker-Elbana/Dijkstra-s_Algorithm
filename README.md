@@ -8,14 +8,14 @@
 This project implements **Dijkstra’s Algorithm**, a fundamental graph algorithm used to compute the shortest paths from a single source node to all other nodes in a weighted graph with non-negative edge weights.
 
 It is designed to be:
-- 🧠 Educational
-- ⚡ Efficient
-- 🧼 Clean and readable
-- 📦 Easy to extend
+- Educational
+- Efficient
+- Clean and readable
+- Easy to extend
 
 ---
 
-## 🧠 What is Dijkstra’s Algorithm?
+##  What is Dijkstra’s Algorithm?
 
 Dijkstra’s Algorithm solves the **single-source shortest path problem** for weighted graphs where all edge weights are non-negative.
 
