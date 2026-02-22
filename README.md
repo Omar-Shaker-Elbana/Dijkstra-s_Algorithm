@@ -61,8 +61,8 @@ Where:
 ## ▶️ How to Run
 
 ```bash
-git clone https://github.com/yourusername/yourrepo.git
-cd yourrepo
+git clone https://github.com/Omar-Shaker-Elbana/Dijkstra-s_Algorithm/
+cd Dijkstra-s_Algorithm
 python main.py
 ```
 
