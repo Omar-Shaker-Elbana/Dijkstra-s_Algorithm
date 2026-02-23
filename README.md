@@ -42,8 +42,7 @@ Where:
 
 ## 🛠️ Tech Stack
 
-- Python 3.x
-- `heapq` (priority queue)
+- Python 3.14.3
 - Dictionary-based adjacency list representation
 
 ---
