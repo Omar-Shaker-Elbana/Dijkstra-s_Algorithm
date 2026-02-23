@@ -57,7 +57,7 @@ Where:
 └── README.md
 └── graph.py
 └── testing.py
-└── example.jpg
+└── example.png
 ```
 ---
 
