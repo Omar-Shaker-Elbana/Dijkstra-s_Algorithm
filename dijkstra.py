@@ -1,9 +1,6 @@
 def Dijkstra(graph, node):
     graph_dict = graph.graph
     
-    if node not in graph_dict.keys() or len(graph_dict.keys()) == 1:
-        return {node: [0, None],}
-    
     result = {node: [0, None],}
     visited = set()
     current = node
