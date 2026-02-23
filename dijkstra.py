@@ -1,39 +1,52 @@
-def Dijkstra(g, node):
+def Dijkstra(graph, node):
+    graph_dict = graph.graph
     
-    graph_dict = g.graph
     if node not in graph_dict.keys() or len(graph_dict.keys()) == 1:
-        return {node: [0, node]}
+        return {node: [0, None],}
     
-    table = {}
-    table[node] = [0, node]
+    result = {node: [0, None],}
     visited = set()
     current = node
-    relation = graph_dict.get(current, [])
-    path = 0
+    neighbors = graph_dict.get(current, [])
+    distance = 0
     
     while True:
         
         nxt = None
-        nxt_path = float("inf")
         visited.add(current)     
         
-        for i in relation:
-            if (path + i[1]) < table.get(i[0], [float("inf")])[0]:
-                table[i[0]] = [path + i[1], current]
+        for i in neighbors:
+            if (distance + i[1]) < result.get(i[0], [float("inf")])[0]:
+                result[i[0]] = [distance + i[1], current]
         
-        for x,y in table.items():
-            if y[0] < nxt_path and x not in visited:
-                nxt, nxt_path = x, y[0]
+        nxt_distance = float("inf")
+        for x,y in result.items():
+            if y[0] < nxt_distance and x not in visited:
+                nxt, nxt_distance = x, y[0]
         
         if nxt is None:
             break
-           
+
         current = nxt
-        relation = graph_dict.get(current, [])
-        path = table[current][0]
+        neighbors = graph_dict.get(current, [])
+        distance = result[current][0]
     
     unvisited = set(graph_dict.keys()) - visited
     for u in unvisited:
-        table[u] = [float("inf"), None]
+        result[u] = [float("inf"), None]
         
-    return table
+    return result
+
+def get_path(routes, node):
+    if routes[node][0] == float("inf"):
+        return None  # No path exists
+
+    path = []
+    distance = routes[node][0]
+    current = node
+    
+    while current is not None:
+        path.append(current)
+        current = routes[current][1]
+    
+    return {"path": path[::-1], "distance": distance}
