@@ -105,7 +105,6 @@ print(distances)
 
 ## 📈 Future Improvements
 
-- Add shortest path reconstruction
 - Add graph visualization
 - Add performance benchmarking
 - Add unit tests (pytest)
